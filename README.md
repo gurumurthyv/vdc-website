@@ -1,6 +1,6 @@
 # Vertical District Contracting LLC — Static Site
 
-A lightweight, single‑page website for VDC built from the provided pre‑qualification deck.
+A lightweight, single‑page website for VDC built from the provided pre‑qualification deck, with dark/light theme toggle.
 
 ## Quick Start (GitHub Pages)
 
@@ -10,10 +10,6 @@ A lightweight, single‑page website for VDC built from the provided pre‑quali
    - **Source:** Deploy from a branch
    - **Branch:** `main` (root)
 4. The site will be live at `https://<your-username>.github.io/<repo>/`.
-
-## Local Preview
-
-Just open `index.html` in a browser. No build step needed.
 
 ## Editing
 
