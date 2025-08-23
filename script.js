@@ -86,12 +86,9 @@ window.handleSubmit = handleSubmit;
   }
 
   function goToSlide(idx){
-    const visible = itemsPerView();
-    const visibleItems = [...getItems()].filter(i=>i.style.display!=="none");
-    const groupWidth = track.clientWidth; // full viewport width of carousel
     currentIndex = (idx + totalSlides()) % totalSlides();
-    const scrollLeft = currentIndex * groupWidth;
-    track.scrollTo({left: scrollLeft, behavior:'smooth'});
+    const groupWidth = track.clientWidth; // visible window of carousel
+    track.scrollTo({left: currentIndex * groupWidth, behavior:'smooth'});
     updateDots();
   }
 
