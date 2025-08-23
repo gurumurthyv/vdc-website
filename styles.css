@@ -80,7 +80,20 @@ html[data-theme="light"] body{
 
 img{max-width:100%;display:block}
 a{color:var(--fg);text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.container{width:70%;max-width:1200px;margin:0 auto;padding:0 20px}
+/* Ensure large screens keep content at ~70% width while very wide viewports don't stretch excessively */
+@media (max-width:1400px){
+  .container{width:72%;}
+}
+@media (max-width:1100px){
+  .container{width:80%;}
+}
+@media (max-width:900px){
+  .container{width:88%;}
+}
+@media (max-width:700px){
+  .container{width:94%;padding:0 16px}
+}
 .small{font-size:.9rem}
 .muted{color:var(--muted)}
 
