@@ -16,12 +16,14 @@
     <div class="container header-inner">
       <div class="brand">
         <div class="logo-main">
-          <img src="assets/extracted_images/slide_1_image.jpg" alt="VDC - Vertical District Contracting LLC" />
+          <img src="/assets/extracted_images/slide_1_image.png" alt="VDC - Vertical District Contracting LLC" />
         </div>
       </div>
         <nav class="nav">
           <a href="#about">About</a>
+          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
+          <a href="#hse">HSE</a>
           <a href="#contact" class="btn">Contact</a>
         </nav>
         <div class="theme-wrap"><button class="theme-toggle" aria-label="Toggle theme">☀️</button></div>
@@ -47,12 +49,12 @@
         </div>
         <div class="hero-media">
           <div class="carousel" id="heroCarousel">
-            <img src="assets/extracted_images/slide_35_image.jpg" alt="VDC Steel Structure Construction" loading="eager"/>
-            <img src="assets/extracted_images/slide_36_image.jpg" alt="VDC Warehouse Development" loading="lazy"/>
-            <img src="assets/extracted_images/slide_37_image.jpg" alt="VDC MEP Installation Project" loading="lazy"/>
-            <img src="assets/extracted_images/slide_38_image.jpg" alt="VDC Interior Fit-out Excellence" loading="lazy"/>
-            <img src="assets/extracted_images/slide_39_image.jpg" alt="VDC Commercial Construction" loading="lazy"/>
-            <img src="assets/extracted_images/slide_41_image.jpg" alt="VDC Industrial Development" loading="lazy"/>
+            <img src="assets/project_images/slide_35_image.jpg" alt="Steel Structure Precision" loading="eager"/>
+            <img src="assets/project_images/slide_36_image.jpg" alt="Warehouse Structural Frame" loading="lazy"/>
+            <img src="assets/project_images/slide_37_image.jpg" alt="On-site Coordination" loading="lazy"/>
+            <img src="assets/project_images/slide_38_image.jpg" alt="Interior Engineering" loading="lazy"/>
+            <img src="assets/project_images/slide_39_image.jpg" alt="Industrial Development" loading="lazy"/>
+            <img src="assets/project_images/slide_41_image.jpg" alt="Corporate Facility" loading="lazy"/>
           </div>
         </div>
       </div>
@@ -60,31 +62,32 @@
 
     <section id="about" class="section">
       <div class="container grid-2">
-        <div>
-          <h2>About Us</h2>
-          <p>Vertical District Contracting LLC (VDC) is a Dubai‑based construction company focused on G+1 contracting, steel structure design & contracting, interior design & execution, and MEP works. Our biggest asset is our dedicated management and skilled workforce. We are committed to completing projects on budget and on time.</p>
-          <div class="cards compact">
-            <div class="card mini">
-              <div class="kpi">2020</div><div class="kpi-note">Year Established</div>
-            </div>
-            <div class="card mini">
-              <div class="kpi">20+</div><div class="kpi-note">Core Staff</div>
-            </div>
-            <div class="card mini">
-              <div class="kpi">161+</div><div class="kpi-note">DEWA Projects</div>
-            </div>
+        <div class="about-left">
+          <header class="section-intro">
+            <h2 class="eyebrow">About Us</h2>
+            <p class="lead">Vertical District Contracting LLC (VDC) delivers <strong>design & build, steel, interior and MEP</strong> solutions with disciplined cost & schedule control. A lean core team and specialist partners allow us to scale while keeping quality high.</p>
+          </header>
+          <div class="stats-grid">
+            <div class="stat"><span class="value">2020</span><span class="label">Established</span></div>
+            <div class="stat"><span class="value">20+</span><span class="label">Core Staff</span></div>
+            <div class="stat"><span class="value">161+</span><span class="label">DEWA Projects</span></div>
+            <div class="stat"><span class="value">8+ yrs</span><span class="label">DEWA Experience</span></div>
           </div>
         </div>
-        <div>
-          <h3>Group of Companies</h3>
-          <ul class="list">
-            <li>Masteright Consultancy LLC (5)</li>
-            <li>Vertical District Contracting LLC (20)</li>
-            <li>Logic 360 Consultancy LLC (5)</li>
-            <li>Abdulla Hussain Askhanani Technical Services (6 + 14)</li>
-          </ul>
-          <h3>Organization</h3>
-          <p>Operations · Procurement & Commercial · Interior Design · Finance & Admin · HR · Architectural Designer · Project Coordinators · Project Managers</p>
+        <div class="about-right">
+          <div class="info-block">
+            <h3 class="subheading">Group of Companies</h3>
+            <ul class="bullet compact">
+              <li>Masteright Consultancy LLC <span class="note">(5)</span></li>
+              <li>Vertical District Contracting LLC <span class="note">(20)</span></li>
+              <li>Logic 360 Consultancy LLC <span class="note">(5)</span></li>
+              <li>Abdulla Hussain Askhanani Technical Services <span class="note">(6 + 14)</span></li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3 class="subheading">Organization Footprint</h3>
+            <p class="muted small">Operations · Procurement & Commercial · Interior Design · Finance & Admin · HR · Architectural Design · Project Coordination · Project Management</p>
+          </div>
         </div>
       </div>
     </section>
@@ -142,176 +145,161 @@
         </div>
 
         <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Auto-expanded project gallery using every asset in project_images -->
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_13_image.jpg" alt="Project slide 13" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 13</h3><p>High quality delivery with coordinated trades.</p><span class="category-tag">Build</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_14_image.jpg" alt="Project slide 14" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 14</h3><p>Structural advancement ensuring durability.</p><span class="category-tag">Commercial</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_15_image.jpg" alt="Project slide 15" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 15</h3><p>Optimized floor layouts and services routing.</p><span class="category-tag">Design</span></div>
+          </div>
           <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/extracted_images/slide_72_image.jpg" alt="VDC Steel Structure - Industrial Warehouse" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Industrial Warehouse Complex</h3>
-              <p>Massive steel structure with integrated MEP systems and modern facilities</p>
-              <span class="category-tag">Steel Structure</span>
-            </div>
+            <img src="assets/project_images/slide_17_image.jpg" alt="Project slide 17" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 17</h3><p>Steel assembly with precision tolerance control.</p><span class="category-tag">Steel</span></div>
+          </div>
+            <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_18_image.jpg" alt="Project slide 18" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 18</h3><p>Warehouse infrastructure enabling logistics scale.</p><span class="category-tag">Warehouse</span></div>
           </div>
           <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_68_image.jpg" alt="VDC G+1 Building Construction" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Modern Commercial Building</h3>
-              <p>Premium G+1 construction with advanced finishes and smart systems</p>
-              <span class="category-tag">Commercial</span>
-            </div>
+            <img src="assets/project_images/slide_19_image.jpg" alt="Project slide 19" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 19</h3><p>Facade and envelope execution excellence.</p><span class="category-tag">Commercial</span></div>
           </div>
           <div class="portfolio-item" data-category="mep">
-            <img src="assets/extracted_images/slide_77_image.jpg" alt="VDC MEP Installation Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Advanced MEP Systems</h3>
-              <p>DEWA-approved electrical & mechanical installations with cutting-edge technology</p>
-              <span class="category-tag">MEP</span>
-            </div>
+            <img src="assets/project_images/slide_20_image.jpg" alt="Project slide 20" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 20</h3><p>MEP integration with resilient redundancy.</p><span class="category-tag">MEP</span></div>
           </div>
-          <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_79_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Luxury Interior Fit-out</h3>
-              <p>High-end commercial interior design with premium materials and finishes</p>
-              <span class="category-tag">Interior</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="warehouses steel">
-            <img src="assets/extracted_images/slide_74_image.jpg" alt="VDC Warehouse Construction" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Smart Warehouse Facility</h3>
-              <p>Advanced steel frame with automation systems and IoT integration</p>
-              <span class="category-tag">Warehouse</span>
-            </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/project_images/slide_21_image.jpg" alt="Project slide 21" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 21</h3><p>Utility distribution with optimized routing.</p><span class="category-tag">Systems</span></div>
           </div>
           <div class="portfolio-item" data-category="warehouses">
-            <img src="assets/extracted_images/slide_37_image.jpg" alt="VDC Construction Site Management" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Mega Construction Project</h3>
-              <p>Large-scale development with professional project coordination</p>
-              <span class="category-tag">Construction</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="warehouses steel">
-            <img src="assets/extracted_images/slide_39_image.jpg" alt="VDC Industrial Warehouse Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Industrial Manufacturing Hub</h3>
-              <p>State-of-the-art warehouse with specialized industrial systems</p>
-              <span class="category-tag">Industrial</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_41_image.jpg" alt="VDC Commercial Building Development" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Corporate Headquarters</h3>
-              <p>Premium office building with modern architecture and smart building features</p>
-              <span class="category-tag">Office</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel">
-            <img src="assets/extracted_images/slide_43_image.jpg" alt="VDC Steel Frame Construction" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Precision Steel Engineering</h3>
-              <p>Complex steel framework with advanced engineering and quality craftsmanship</p>
-              <span class="category-tag">Engineering</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="mep">
-            <img src="assets/extracted_images/slide_45_image.jpg" alt="VDC MEP Installation" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Smart Building Systems</h3>
-              <p>Integrated MEP solutions with building automation and energy efficiency</p>
-              <span class="category-tag">Systems</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_47_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Executive Interior Design</h3>
-              <p>Bespoke commercial interiors with luxury finishes and modern aesthetics</p>
-              <span class="category-tag">Interior</span>
-            </div>
+            <img src="assets/project_images/slide_24_image.jpg" alt="Project slide 24" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 24</h3><p>Logistics-ready structure with modular bays.</p><span class="category-tag">Warehouse</span></div>
           </div>
           <div class="portfolio-item" data-category="warehouses">
-            <img src="assets/extracted_images/slide_49_image.jpg" alt="VDC Construction Progress" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Logistics Excellence Center</h3>
-              <p>Advanced warehouse facility designed for next-generation logistics</p>
-              <span class="category-tag">Development</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="mep commercial">
-            <img src="assets/extracted_images/slide_51_image.jpg" alt="VDC Building Systems" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Intelligent Building Network</h3>
-              <p>Complete building automation with IoT, HVAC, and security integration</p>
-              <span class="category-tag">Automation</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="warehouses">
-            <img src="assets/extracted_images/slide_34_image.jpg" alt="VDC Logistics Facility" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Distribution Mega Center</h3>
-              <p>Ultra-modern distribution facility with automated material handling</p>
-              <span class="category-tag">Logistics</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel">
-            <img src="assets/extracted_images/slide_36_image.jpg" alt="VDC Steel Structure Assembly" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Architectural Steel Masterpiece</h3>
-              <p>Innovative steel construction combining form and function beautifully</p>
-              <span class="category-tag">Assembly</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel">
-            <img src="assets/extracted_images/slide_38_image.jpg" alt="VDC Steel Construction Expertise" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Industrial Steel Complex</h3>
-              <p>Heavy-duty steel fabrication with precision engineering excellence</p>
-              <span class="category-tag">Fabrication</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="mep">
-            <img src="assets/extracted_images/slide_40_image.jpg" alt="VDC MEP Systems Integration" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Smart MEP Integration</h3>
-              <p>Next-generation mechanical, electrical & plumbing with AI monitoring</p>
-              <span class="category-tag">Integration</span>
-            </div>
+            <img src="assets/project_images/slide_25_image.jpg" alt="Project slide 25" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 25</h3><p>Efficient site sequencing and material staging.</p><span class="category-tag">Operations</span></div>
           </div>
           <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_42_image.jpg" alt="VDC Commercial Construction" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Flagship Commercial Tower</h3>
-              <p>Iconic commercial development setting new standards in construction</p>
-              <span class="category-tag">Development</span>
-            </div>
+            <img src="assets/project_images/slide_26_image.jpg" alt="Project slide 26" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 26</h3><p>Structural frame alignment and tolerance checks.</p><span class="category-tag">QA/QC</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_27_image.jpg" alt="Project slide 27" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 27</h3><p>Interior progress with coordinated trades.</p><span class="category-tag">Interior</span></div>
+          </div>
+          <div class="portfolio-item" data-category="warehouses">
+            <img src="assets/project_images/slide_28_image.jpg" alt="Project slide 28" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 28</h3><p>Envelope closure and weatherproofing.</p><span class="category-tag">Envelope</span></div>
+          </div>
+          <div class="portfolio-item" data-category="warehouses">
+            <img src="assets/project_images/slide_29_image.jpg" alt="Project slide 29" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 29</h3><p>Dynamic storage capacity planning support.</p><span class="category-tag">Logistics</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/project_images/slide_30_image.jpg" alt="Project slide 30" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 30</h3><p>Steel erection phase under controlled safety plan.</p><span class="category-tag">Steel</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/project_images/slide_31_image.jpg" alt="Project slide 31" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 31</h3><p>Fabricated connections ensuring rigidity.</p><span class="category-tag">Engineering</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/project_images/slide_33_image.jpg" alt="Project slide 33" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 33</h3><p>Progressive steel bay installation workflow.</p><span class="category-tag">Assembly</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/project_images/slide_35_image.jpg" alt="Project slide 35" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 35</h3><p>Load-bearing span optimization analysis.</p><span class="category-tag">Structural</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/project_images/slide_36_image.jpg" alt="Project slide 36" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 36</h3><p>Rafter alignment and joint calibration.</p><span class="category-tag">Support</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_37_image.jpg" alt="Project slide 37" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 37</h3><p>Cross-disciplinary supervision and progress checks.</p><span class="category-tag">Site</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_38_image.jpg" alt="Project slide 38" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 38</h3><p>Interior shell infrastructure readiness.</p><span class="category-tag">Shell</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_39_image.jpg" alt="Project slide 39" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 39</h3><p>Industrial facility scale and bay layout.</p><span class="category-tag">Industrial</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_40_image.jpg" alt="Project slide 40" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 40</h3><p>Systems integration and commissioning prep.</p><span class="category-tag">Systems</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_41_image.jpg" alt="Project slide 41" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 41</h3><p>Corporate facility internal progression.</p><span class="category-tag">Corporate</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_42_image.jpg" alt="Project slide 42" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 42</h3><p>Structural framing vertical alignment QA.</p><span class="category-tag">QA/QC</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/project_images/slide_43_image.jpg" alt="Project slide 43" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 43</h3><p>Sequenced component installation strategy.</p><span class="category-tag">Planning</span></div>
           </div>
           <div class="portfolio-item" data-category="mep">
-            <img src="assets/extracted_images/slide_44_image.jpg" alt="VDC Solar Energy Projects" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Solar & Green Energy Hub</h3>
-              <p>Sustainable energy solutions with cutting-edge solar technology</p>
-              <span class="category-tag">Solar</span>
-            </div>
+            <img src="assets/project_images/slide_44_image.jpg" alt="Project slide 44" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 44</h3><p>Sustainable system integration preparation.</p><span class="category-tag">Solar</span></div>
+          </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/project_images/slide_45_image.jpg" alt="Project slide 45" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 45</h3><p>Control systems and service coordination.</p><span class="category-tag">Controls</span></div>
+          </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/project_images/slide_46_image.jpg" alt="Project slide 46" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 46</h3><p>Mechanical plant area arrangement.</p><span class="category-tag">MEP</span></div>
+          </div>
+          <div class="portfolio-item" data-category="commercial interior">
+            <img src="assets/project_images/slide_47_image.jpg" alt="Project slide 47" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 47</h3><p>Interior finishing and detailing execution.</p><span class="category-tag">Interior</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_65_image.jpg" alt="Project slide 65" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 65</h3><p>Large span structural bay installation.</p><span class="category-tag">Span</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_66_image.jpg" alt="Project slide 66" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 66</h3><p>Fabricated joints and connection assembly.</p><span class="category-tag">Connections</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_67_image.jpg" alt="Project slide 67" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 67</h3><p>Rigorous safety oversight during erection.</p><span class="category-tag">HSE</span></div>
+          </div>
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/project_images/slide_68_image.jpg" alt="Project slide 68" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 68</h3><p>Optimized structural grid for efficiency.</p><span class="category-tag">Grid</span></div>
           </div>
         </div>
         </div>
 
         <div class="project-highlight">
-          <h3>Featured Project: Central Workshop for R&D — Solar Park</h3>
+          <h3>Featured Project: Hybrid Structural Innovation</h3>
           <div class="highlight-grid">
             <div class="highlight-image">
-              <img src="assets/extracted_images/slide_81_image.jpg" alt="Solar Park Workshop Project" loading="lazy">
+              <img src="assets/project_images/slide_35_image.jpg" alt="Featured Hybrid Structure" loading="lazy">
             </div>
             <div class="highlight-details">
               <ul class="list">
-                <li>Design & Build, 12‑month duration including mobilization</li>
-                <li>30×20×4.5m hot‑rolled steel structure, single‑slope roof</li>
-                <li>RCC isolated footings; 250μ paint (DEWA spec)</li>
-                <li>PU‑spec roof & wall cladding; ACP‑clad parapet</li>
-                <li>RUD insulated motorized doors</li>
-                <li>HVAC: ducted split AC with pre‑insulated ducts (ASHRAE)</li>
-                <li>MEP: 104 kW load, fire alarm & hose reel, ELV, drainage & water to existing systems</li>
+                <li>Turnkey delivery with accelerated schedule and value engineering</li>
+                <li>Hybrid steel / RCC system with optimized thermal envelope</li>
+                <li>Integrated MEP: HVAC, Fire Fighting, ELV, Solar ready conduits</li>
+                <li>Digital QA/QC tracking & progressive handover documentation</li>
+                <li>Smart energy monitoring & efficient lighting strategy</li>
+                <li>Enhanced HSE compliance: zero lost time incidents</li>
+                <li>Fully coordinated BIM-driven execution workflow</li>
               </ul>
             </div>
           </div>
@@ -334,14 +322,14 @@
             <li>Responsible waste handling & disposal</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Site Safety Rules</h3>
-          <ol>
-            <li>Always wear PPE on site</li>
-            <li>Follow signages & supervisor instructions</li>
-            <li>Maintain tidy work areas; remove hazards</li>
-            <li>Isolate energy sources; verify permits</li>
-            <li>Report incidents; participate in training</li>
+        <div class="card rule-card">
+          <h3 class="card-title">Site Safety Rules</h3>
+          <ol class="rule-list">
+            <li><span class="rule-badge">1</span><span class="text">Always wear PPE on site</span></li>
+            <li><span class="rule-badge">2</span><span class="text">Follow signages & supervisor instructions</span></li>
+            <li><span class="rule-badge">3</span><span class="text">Maintain tidy work areas; remove hazards</span></li>
+            <li><span class="rule-badge">4</span><span class="text">Isolate energy sources; verify permits</span></li>
+            <li><span class="rule-badge">5</span><span class="text">Report incidents; participate in training</span></li>
           </ol>
         </div>
       </div>
@@ -360,9 +348,16 @@
             <li>As‑built docs and O&M manual handover</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Method Statements</h3>
-          <p>Before each activity, we establish and control work procedures to meet contract specifications and statutory codes.</p>
+        <div class="card method-card">
+          <h3 class="card-title">Method Statements</h3>
+          <ul class="process-list">
+            <li><strong>Define</strong> scope & sequence</li>
+            <li><strong>Assess</strong> risks & controls</li>
+            <li><strong>Approve</strong> materials & vendors</li>
+            <li><strong>Execute</strong> with inspection hold‑points</li>
+            <li><strong>Close</strong> with QA sign‑off & records</li>
+          </ul>
+          <p class="muted tiny">Structured documentation ensures statutory compliance and consistent delivery.</p>
         </div>
       </div>
     </section>
@@ -408,7 +403,9 @@
       </div>
       <div class="foot-links">
         <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#hse">HSE</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
