@@ -145,7 +145,12 @@
           <button class="tab-btn" data-tab="mep">MEP Works</button>
         </div>
 
-        <div class="portfolio-grid" id="portfolioGrid">
+        <div class="projects-carousel">
+          <div class="carousel-controls">
+            <button class="proj-prev" aria-label="Previous projects">‹</button>
+            <button class="proj-next" aria-label="Next projects">›</button>
+          </div>
+          <div class="projects-track" id="projectsTrack">
           <!-- Auto-expanded project gallery using every asset in project_images -->
           <div class="portfolio-item" data-category="commercial">
             <img src="assets/project_images/slide_13_image.jpg" alt="Project slide 13" loading="lazy">
@@ -160,12 +165,13 @@
             <div class="portfolio-overlay"><h3>Project 15</h3><p>Optimized floor layouts and services routing.</p><span class="category-tag">Design</span></div>
           </div>
           <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/project_images/slide_17_image.jpg" alt="Project slide 17" loading="lazy">
-            <div class="portfolio-overlay"><h3>Project 17</h3><p>Steel assembly with precision tolerance control.</p><span class="category-tag">Steel</span></div>
+            <img src="assets/project_images/slide_68_image.jpg" alt="Project slide 68" loading="lazy">
+            <div class="portfolio-overlay"><h3>Project 68</h3><p>Optimized structural grid for efficiency.</p><span class="category-tag">Grid</span></div>
           </div>
-            <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/project_images/slide_18_image.jpg" alt="Project slide 18" loading="lazy">
-            <div class="portfolio-overlay"><h3>Project 18</h3><p>Warehouse infrastructure enabling logistics scale.</p><span class="category-tag">Warehouse</span></div>
+          </div><!-- /.projects-track -->
+          <div class="carousel-dots" id="projectsDots" aria-label="Project pages"></div>
+        </div><!-- /.projects-carousel -->
+        <div class="project-highlight">
           </div>
           <div class="portfolio-item" data-category="commercial">
             <img src="assets/project_images/slide_19_image.jpg" alt="Project slide 19" loading="lazy">
