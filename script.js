@@ -9,11 +9,12 @@
     const btn = document.querySelector('.theme-toggle');
     if(btn){ btn.textContent = mode === 'dark' ? '🌙' : '☀️'; }
   }
-  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+  // Default to light theme
+  applyTheme(saved || 'light');
   const btn = document.querySelector('.theme-toggle');
   if(btn){
     btn.addEventListener('click', ()=>{
-      const current = htmlEl.getAttribute('data-theme') || 'dark';
+      const current = htmlEl.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       localStorage.setItem('theme', next);
       applyTheme(next);
@@ -60,5 +61,60 @@ window.handleSubmit = handleSubmit;
     });
     i = (i+1) % imgs.length;
   }
-  setInterval(show, 3000);
+  setInterval(show, 4000);
+})();
+
+// Portfolio filtering
+(function(){
+  const tabs = document.querySelectorAll('.tab-btn');
+  const items = document.querySelectorAll('.portfolio-item');
+  
+  if(!tabs.length || !items.length) return;
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      // Add active class to clicked tab
+      tab.classList.add('active');
+      
+      const filter = tab.getAttribute('data-tab');
+      
+      items.forEach(item => {
+        if(filter === 'all') {
+          item.style.display = 'block';
+          item.style.animation = 'fadeIn 0.5s ease-in-out';
+        } else {
+          const categories = item.getAttribute('data-category');
+          if(categories && categories.includes(filter)) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+})();
+
+// Smooth scroll for navigation links
+(function(){
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        // Close mobile nav if open
+        const nav = document.querySelector('.nav');
+        if(nav) nav.classList.remove('open');
+      }
+    });
+  });
 })();
