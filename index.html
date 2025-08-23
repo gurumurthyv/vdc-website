@@ -20,9 +20,7 @@
         </div>
       </div>
         <nav class="nav">
-          <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#contact" class="btn">Contact</a>
         </nav>
@@ -49,12 +47,12 @@
         </div>
         <div class="hero-media">
           <div class="carousel" id="heroCarousel">
-            <img src="assets/extracted_images/slide_8_image.jpg" alt="VDC Steel Structure Construction" loading="eager"/>
-            <img src="assets/extracted_images/slide_3_image.jpg" alt="VDC Warehouse Development" loading="lazy"/>
-            <img src="assets/extracted_images/slide_4_image.jpg" alt="VDC MEP Installation Project" loading="lazy"/>
-            <img src="assets/extracted_images/slide_5_image.jpg" alt="VDC Interior Fit-out Excellence" loading="lazy"/>
-            <img src="assets/extracted_images/slide_6_image.jpg" alt="VDC Commercial Construction" loading="lazy"/>
-            <img src="assets/extracted_images/slide_7_image.jpg" alt="VDC Industrial Development" loading="lazy"/>
+            <img src="assets/extracted_images/slide_35_image.jpg" alt="VDC Steel Structure Construction" loading="eager"/>
+            <img src="assets/extracted_images/slide_36_image.jpg" alt="VDC Warehouse Development" loading="lazy"/>
+            <img src="assets/extracted_images/slide_37_image.jpg" alt="VDC MEP Installation Project" loading="lazy"/>
+            <img src="assets/extracted_images/slide_38_image.jpg" alt="VDC Interior Fit-out Excellence" loading="lazy"/>
+            <img src="assets/extracted_images/slide_39_image.jpg" alt="VDC Commercial Construction" loading="lazy"/>
+            <img src="assets/extracted_images/slide_41_image.jpg" alt="VDC Industrial Development" loading="lazy"/>
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@
       </div>
     </section>
 
-    <section id="services" class="section alt">
+    <section id="services" class="section">
       <div class="container">
         <h2>Capabilities</h2>
         <div class="cards">
@@ -105,7 +103,7 @@
       </div>
     </section>
 
-    <section id="authorities" class="section">
+    <section id="authorities" class="section alt">
       <div class="container grid-2">
         <div>
           <h2>Approvals & Registration</h2>
@@ -130,59 +128,180 @@
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <section id="projects" class="section">
       <div class="container">
-        <h2>Featured Projects</h2>
-        <p class="muted">Showcasing our actual project portfolio with real construction sites, steel structures, and completed works across Dubai and the UAE.</p>
-        <div class="gallery">
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_10_image.jpg" alt="VDC Steel Structure - Industrial Warehouse" loading="lazy">
-            <div class="project-info">
-              <h3>Industrial Warehouse</h3>
-              <p>Steel structure with MEP integration</p>
+        <h2>Our Projects</h2>
+        <p class="muted">Showcasing our comprehensive project portfolio including steel structures, warehouses, commercial buildings, MEP systems, and specialized facilities across Dubai and the UAE.</p>
+        
+        <div class="portfolio-tabs">
+          <button class="tab-btn active" data-tab="all">All Projects</button>
+          <button class="tab-btn" data-tab="warehouses">Warehouses</button>
+          <button class="tab-btn" data-tab="commercial">Commercial</button>
+          <button class="tab-btn" data-tab="steel">Steel Structures</button>
+          <button class="tab-btn" data-tab="mep">MEP Works</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div class="portfolio-item" data-category="steel warehouses">
+            <img src="assets/extracted_images/slide_72_image.jpg" alt="VDC Steel Structure - Industrial Warehouse" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Industrial Warehouse Complex</h3>
+              <p>Massive steel structure with integrated MEP systems and modern facilities</p>
+              <span class="category-tag">Steel Structure</span>
             </div>
           </div>
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_11_image.jpg" alt="VDC G+1 Building Construction" loading="lazy">
-            <div class="project-info">
-              <h3>G+1 Commercial Building</h3>
-              <p>Complete turnkey construction</p>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/extracted_images/slide_68_image.jpg" alt="VDC G+1 Building Construction" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Modern Commercial Building</h3>
+              <p>Premium G+1 construction with advanced finishes and smart systems</p>
+              <span class="category-tag">Commercial</span>
             </div>
           </div>
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_12_image.jpg" alt="VDC MEP Installation Project" loading="lazy">
-            <div class="project-info">
-              <h3>MEP Systems Installation</h3>
-              <p>DEWA-approved electrical & mechanical</p>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/extracted_images/slide_77_image.jpg" alt="VDC MEP Installation Project" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Advanced MEP Systems</h3>
+              <p>DEWA-approved electrical & mechanical installations with cutting-edge technology</p>
+              <span class="category-tag">MEP</span>
             </div>
           </div>
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_13_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
-            <div class="project-info">
-              <h3>Commercial Interior Fit-out</h3>
-              <p>High-end interior design & execution</p>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/extracted_images/slide_79_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Luxury Interior Fit-out</h3>
+              <p>High-end commercial interior design with premium materials and finishes</p>
+              <span class="category-tag">Interior</span>
             </div>
           </div>
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_14_image.jpg" alt="VDC Warehouse Construction" loading="lazy">
-            <div class="project-info">
-              <h3>Modern Warehouse Facility</h3>
-              <p>Steel frame with advanced systems</p>
+          <div class="portfolio-item" data-category="warehouses steel">
+            <img src="assets/extracted_images/slide_74_image.jpg" alt="VDC Warehouse Construction" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Smart Warehouse Facility</h3>
+              <p>Advanced steel frame with automation systems and IoT integration</p>
+              <span class="category-tag">Warehouse</span>
             </div>
           </div>
-          <div class="project-card">
-            <img src="assets/extracted_images/slide_15_image.jpg" alt="VDC Construction Site Management" loading="lazy">
-            <div class="project-info">
-              <h3>Site Development</h3>
-              <p>Professional project coordination</p>
+          <div class="portfolio-item" data-category="warehouses">
+            <img src="assets/extracted_images/slide_37_image.jpg" alt="VDC Construction Site Management" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Mega Construction Project</h3>
+              <p>Large-scale development with professional project coordination</p>
+              <span class="category-tag">Construction</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="warehouses steel">
+            <img src="assets/extracted_images/slide_39_image.jpg" alt="VDC Industrial Warehouse Project" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Industrial Manufacturing Hub</h3>
+              <p>State-of-the-art warehouse with specialized industrial systems</p>
+              <span class="category-tag">Industrial</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/extracted_images/slide_41_image.jpg" alt="VDC Commercial Building Development" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Corporate Headquarters</h3>
+              <p>Premium office building with modern architecture and smart building features</p>
+              <span class="category-tag">Office</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/extracted_images/slide_43_image.jpg" alt="VDC Steel Frame Construction" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Precision Steel Engineering</h3>
+              <p>Complex steel framework with advanced engineering and quality craftsmanship</p>
+              <span class="category-tag">Engineering</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/extracted_images/slide_45_image.jpg" alt="VDC MEP Installation" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Smart Building Systems</h3>
+              <p>Integrated MEP solutions with building automation and energy efficiency</p>
+              <span class="category-tag">Systems</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/extracted_images/slide_47_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Executive Interior Design</h3>
+              <p>Bespoke commercial interiors with luxury finishes and modern aesthetics</p>
+              <span class="category-tag">Interior</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="warehouses">
+            <img src="assets/extracted_images/slide_49_image.jpg" alt="VDC Construction Progress" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Logistics Excellence Center</h3>
+              <p>Advanced warehouse facility designed for next-generation logistics</p>
+              <span class="category-tag">Development</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="mep commercial">
+            <img src="assets/extracted_images/slide_51_image.jpg" alt="VDC Building Systems" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Intelligent Building Network</h3>
+              <p>Complete building automation with IoT, HVAC, and security integration</p>
+              <span class="category-tag">Automation</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="warehouses">
+            <img src="assets/extracted_images/slide_34_image.jpg" alt="VDC Logistics Facility" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Distribution Mega Center</h3>
+              <p>Ultra-modern distribution facility with automated material handling</p>
+              <span class="category-tag">Logistics</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/extracted_images/slide_36_image.jpg" alt="VDC Steel Structure Assembly" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Architectural Steel Masterpiece</h3>
+              <p>Innovative steel construction combining form and function beautifully</p>
+              <span class="category-tag">Assembly</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="steel">
+            <img src="assets/extracted_images/slide_38_image.jpg" alt="VDC Steel Construction Expertise" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Industrial Steel Complex</h3>
+              <p>Heavy-duty steel fabrication with precision engineering excellence</p>
+              <span class="category-tag">Fabrication</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/extracted_images/slide_40_image.jpg" alt="VDC MEP Systems Integration" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Smart MEP Integration</h3>
+              <p>Next-generation mechanical, electrical & plumbing with AI monitoring</p>
+              <span class="category-tag">Integration</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="commercial">
+            <img src="assets/extracted_images/slide_42_image.jpg" alt="VDC Commercial Construction" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Flagship Commercial Tower</h3>
+              <p>Iconic commercial development setting new standards in construction</p>
+              <span class="category-tag">Development</span>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="mep">
+            <img src="assets/extracted_images/slide_44_image.jpg" alt="VDC Solar Energy Projects" loading="lazy">
+            <div class="portfolio-overlay">
+              <h3>Solar & Green Energy Hub</h3>
+              <p>Sustainable energy solutions with cutting-edge solar technology</p>
+              <span class="category-tag">Solar</span>
             </div>
           </div>
         </div>
+        </div>
+
         <div class="project-highlight">
-          <h3>Central Workshop for R&D — Solar Park</h3>
+          <h3>Featured Project: Central Workshop for R&D — Solar Park</h3>
           <div class="highlight-grid">
             <div class="highlight-image">
-              <img src="assets/extracted_images/slide_16_image.jpg" alt="Solar Park Workshop Project" loading="lazy">
+              <img src="assets/extracted_images/slide_81_image.jpg" alt="Solar Park Workshop Project" loading="lazy">
             </div>
             <div class="highlight-details">
               <ul class="list">
@@ -200,162 +319,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="section">
-      <div class="container">
-        <h2>Project Portfolio</h2>
-        <p class="muted">A comprehensive view of our diverse construction projects including warehouses, commercial buildings, and specialized facilities.</p>
-        
-        <div class="portfolio-tabs">
-          <button class="tab-btn active" data-tab="all">All Projects</button>
-          <button class="tab-btn" data-tab="warehouses">Warehouses</button>
-          <button class="tab-btn" data-tab="commercial">Commercial</button>
-          <button class="tab-btn" data-tab="steel">Steel Structures</button>
-          <button class="tab-btn" data-tab="mep">MEP Works</button>
-        </div>
-
-        <div class="portfolio-grid" id="portfolioGrid">
-          <div class="portfolio-item" data-category="warehouses steel">
-            <img src="assets/extracted_images/slide_20_image.jpg" alt="VDC Industrial Warehouse Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Industrial Warehouse Complex</h3>
-              <p>Large-scale steel structure with integrated MEP systems and modern facilities</p>
-              <span class="category-tag">Warehouse</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_21_image.jpg" alt="VDC Commercial Building Development" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Commercial Office Building</h3>
-              <p>G+1 structure with premium interior fit-out and complete MEP integration</p>
-              <span class="category-tag">Commercial</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/extracted_images/slide_22_image.jpg" alt="VDC Steel Frame Construction" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Steel Frame Warehouse</h3>
-              <p>Custom-designed steel structure with optimized load distribution</p>
-              <span class="category-tag">Steel Structure</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="mep">
-            <img src="assets/extracted_images/slide_23_image.jpg" alt="VDC MEP Installation" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>DEWA-Approved MEP Systems</h3>
-              <p>Complete electrical and mechanical installation with fire safety systems</p>
-              <span class="category-tag">MEP</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="commercial">
-            <img src="assets/extracted_images/slide_24_image.jpg" alt="VDC Interior Fit-out Project" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Premium Interior Fit-out</h3>
-              <p>High-end commercial interior design and execution with modern amenities</p>
-              <span class="category-tag">Interior</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/extracted_images/slide_25_image.jpg" alt="VDC Construction Progress" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Warehouse Development</h3>
-              <p>Progressive construction showcasing our systematic approach to delivery</p>
-              <span class="category-tag">Construction</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="commercial mep">
-            <img src="assets/extracted_images/slide_26_image.jpg" alt="VDC Building Systems" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Integrated Building Systems</h3>
-              <p>Complete building automation with HVAC, electrical, and safety systems</p>
-              <span class="category-tag">Systems</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="warehouses">
-            <img src="assets/extracted_images/slide_27_image.jpg" alt="VDC Logistics Facility" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Logistics & Distribution Center</h3>
-              <p>Modern warehouse facility designed for efficient logistics operations</p>
-              <span class="category-tag">Logistics</span>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="steel">
-            <img src="assets/extracted_images/slide_28_image.jpg" alt="VDC Steel Structure Assembly" loading="lazy">
-            <div class="portfolio-overlay">
-              <h3>Steel Structure Assembly</h3>
-              <p>Precision engineering and assembly of complex steel frameworks</p>
-              <span class="category-tag">Engineering</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="capabilities" class="section alt">
-      <div class="container">
-        <h2>Advanced Capabilities</h2>
-        <p class="muted">Our expertise spans across various construction sectors with specialized solutions for each project type.</p>
-        <div class="capabilities-grid">
-          <div class="capability-card">
-            <div class="capability-icon">🏗️</div>
-            <img src="assets/extracted_images/slide_30_image.jpg" alt="VDC Steel Construction Expertise" loading="lazy">
-            <div class="card-content">
-              <h3>Steel Structure Engineering</h3>
-              <p>Advanced steel fabrication and assembly with precision engineering for warehouses, industrial facilities, and custom structures.</p>
-              <ul class="feature-list">
-                <li>Hot-rolled steel construction</li>
-                <li>Custom structural design</li>
-                <li>DEWA-compliant specifications</li>
-                <li>Advanced welding & fabrication</li>
-              </ul>
-            </div>
-          </div>
-          <div class="capability-card">
-            <div class="capability-icon">⚡</div>
-            <img src="assets/extracted_images/slide_31_image.jpg" alt="VDC MEP Systems Integration" loading="lazy">
-            <div class="card-content">
-              <h3>MEP Systems Integration</h3>
-              <p>Complete mechanical, electrical, and plumbing solutions with DEWA approval and advanced building automation.</p>
-              <ul class="feature-list">
-                <li>DEWA-approved installations</li>
-                <li>HVAC with ASHRAE standards</li>
-                <li>Fire safety & alarm systems</li>
-                <li>Building automation & ELV</li>
-              </ul>
-            </div>
-          </div>
-          <div class="capability-card">
-            <div class="capability-icon">🏢</div>
-            <img src="assets/extracted_images/slide_32_image.jpg" alt="VDC Commercial Construction" loading="lazy">
-            <div class="card-content">
-              <h3>Commercial Development</h3>
-              <p>Full-service commercial construction from concept to completion, including G+1 buildings and interior fit-out.</p>
-              <ul class="feature-list">
-                <li>G+1 building construction</li>
-                <li>Premium interior design</li>
-                <li>Turnkey project delivery</li>
-                <li>Quality assurance protocols</li>
-              </ul>
-            </div>
-          </div>
-          <div class="capability-card">
-            <div class="capability-icon">☀️</div>
-            <img src="assets/extracted_images/slide_33_image.jpg" alt="VDC Solar Energy Projects" loading="lazy">
-            <div class="card-content">
-              <h3>Solar & Renewable Energy</h3>
-              <p>Sustainable energy solutions with solar panel installation, grid integration, and energy management systems.</p>
-              <ul class="feature-list">
-                <li>Solar panel installation</li>
-                <li>Grid integration systems</li>
-                <li>Energy management solutions</li>
-                <li>Utility interface compliance</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="hse" class="section">
+    <section id="hse" class="section alt">
       <div class="container grid-2">
         <div>
           <h2>Health, Safety & Environment (HSE)</h2>
@@ -383,7 +347,7 @@
       </div>
     </section>
 
-    <section id="quality" class="section alt">
+    <section id="quality" class="section">
       <div class="container grid-2">
         <div>
           <h2>Quality Assurance & Control</h2>
@@ -403,7 +367,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container grid-2">
         <div>
           <h2>Contact Us</h2>
@@ -444,7 +408,6 @@
       </div>
       <div class="foot-links">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
