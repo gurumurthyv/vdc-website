@@ -145,13 +145,8 @@
           <button class="tab-btn" data-tab="mep">MEP Works</button>
         </div>
 
-        <div class="projects-carousel">
-          <div class="carousel-controls">
-            <button class="proj-prev" aria-label="Previous projects">‹</button>
-            <button class="proj-next" aria-label="Next projects">›</button>
-          </div>
-          <div class="projects-track" id="projectsTrack">
-          <!-- Auto-expanded project gallery using every asset in project_images -->
+        <!-- Static grid replacing broken carousel -->
+        <div id="projectsGrid" class="portfolio-grid">
           <div class="portfolio-item" data-category="commercial">
             <img src="assets/project_images/slide_13_image.jpg" alt="Project slide 13" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 13</h3><p>High quality delivery with coordinated trades.</p><span class="category-tag">Build</span></div>
@@ -164,15 +159,6 @@
             <img src="assets/project_images/slide_15_image.jpg" alt="Project slide 15" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 15</h3><p>Optimized floor layouts and services routing.</p><span class="category-tag">Design</span></div>
           </div>
-          <div class="portfolio-item" data-category="steel warehouses">
-            <img src="assets/project_images/slide_68_image.jpg" alt="Project slide 68" loading="lazy">
-            <div class="portfolio-overlay"><h3>Project 68</h3><p>Optimized structural grid for efficiency.</p><span class="category-tag">Grid</span></div>
-          </div>
-          </div><!-- /.projects-track -->
-          <div class="carousel-dots" id="projectsDots" aria-label="Project pages"></div>
-        </div><!-- /.projects-carousel -->
-        <div class="project-highlight">
-          </div>
           <div class="portfolio-item" data-category="commercial">
             <img src="assets/project_images/slide_19_image.jpg" alt="Project slide 19" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 19</h3><p>Facade and envelope execution excellence.</p><span class="category-tag">Commercial</span></div>
@@ -181,7 +167,7 @@
             <img src="assets/project_images/slide_20_image.jpg" alt="Project slide 20" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 20</h3><p>MEP integration with resilient redundancy.</p><span class="category-tag">MEP</span></div>
           </div>
-          <div class="portfolio-item" data-category="mep">
+            <div class="portfolio-item" data-category="mep">
             <img src="assets/project_images/slide_21_image.jpg" alt="Project slide 21" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 21</h3><p>Utility distribution with optimized routing.</p><span class="category-tag">Systems</span></div>
           </div>
@@ -289,6 +275,9 @@
             <img src="assets/project_images/slide_68_image.jpg" alt="Project slide 68" loading="lazy">
             <div class="portfolio-overlay"><h3>Project 68</h3><p>Optimized structural grid for efficiency.</p><span class="category-tag">Grid</span></div>
           </div>
+        </div>
+        <div class="projects-actions" style="text-align:center;margin-top:24px;">
+          <button id="showMoreBtn" class="btn outline" type="button">Show More</button>
         </div>
         <div class="project-highlight">
           <h3>Featured Project: Hybrid Structural Innovation</h3>

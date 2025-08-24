@@ -64,116 +64,67 @@ window.handleSubmit = handleSubmit;
   setInterval(show, 4000);
 })();
 
-// Portfolio filtering
+// Portfolio filtering (static grid version)
 (function(){
   const tabs = document.querySelectorAll('.tab-btn');
-  const track = document.getElementById('projectsTrack');
-  const dotsWrap = document.getElementById('projectsDots');
-  if(!track) return;
-  const getItems = () => track.querySelectorAll('.portfolio-item');
-  let autoplayTimer=null, currentIndex=0;
+  const grid = document.getElementById('projectsGrid');
+  if(!grid) return; // no projects section
+  const items = Array.from(grid.querySelectorAll('.portfolio-item'));
+  const toggleBtn = document.getElementById('showMoreBtn');
+  const MAX_INITIAL = 6;
+  let expanded = false;
 
-  function itemsPerView(){
-    if(window.innerWidth <= 700) return 1;
-    if(window.innerWidth <= 1100) return 2;
-    return 3;
+  function visibleByFilter(filter){
+    return items.filter(item => {
+      const cats = (item.getAttribute('data-category')||'').split(/[,\s]+/);
+      return filter === 'all' || cats.includes(filter);
+    });
   }
 
-  function totalSlides(){
-    const visible = itemsPerView();
-    const visibleItems = [...getItems()].filter(i=>i.style.display!=="none");
-    return Math.max(1, Math.ceil(visibleItems.length / visible));
-  }
-
-  function goToSlide(idx){
-    const visible = itemsPerView();
-    const visibleItems = [...getItems()].filter(i=>i.style.display!=="none");
-    const groupWidth = track.clientWidth; // full viewport width of carousel
-    currentIndex = (idx + totalSlides()) % totalSlides();
-    const scrollLeft = currentIndex * groupWidth;
-    track.scrollTo({left: scrollLeft, behavior:'smooth'});
-    updateDots();
-  }
-
-  function buildDots(){
-    if(!dotsWrap) return; 
-    dotsWrap.innerHTML='';
-    const count = totalSlides();
-    for(let i=0;i<count;i++){
-      const b=document.createElement('button');
-      b.setAttribute('aria-label', 'Go to slide '+(i+1));
-      if(i===currentIndex) b.classList.add('active');
-      b.addEventListener('click',()=>{stopAutoplay();goToSlide(i);startAutoplay();});
-      dotsWrap.appendChild(b);
+  function render(filter){
+    const filtered = visibleByFilter(filter);
+    // Hide all first
+    items.forEach(i=> i.style.display='none');
+    if(!expanded){
+      filtered.slice(0, MAX_INITIAL).forEach(i=> i.style.display='block');
+    } else {
+      filtered.forEach(i=> i.style.display='block');
+    }
+    // Toggle button state
+    if(toggleBtn){
+      if(filtered.length <= MAX_INITIAL){
+        toggleBtn.style.display='none';
+      } else {
+        toggleBtn.style.display='inline-block';
+        toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
+      }
     }
   }
 
-  function updateDots(){
-    if(!dotsWrap) return;
-    const btns=[...dotsWrap.querySelectorAll('button')];
-    btns.forEach((b,i)=>{b.classList.toggle('active', i===currentIndex);});
-  }
+  let currentFilter = 'all';
 
-  function startAutoplay(){
-    stopAutoplay();
-    autoplayTimer = setInterval(()=>{goToSlide(currentIndex+1);}, 5000);
-  }
-  function stopAutoplay(){ if(autoplayTimer) clearInterval(autoplayTimer); }
-
-  // Rebuild dots & snap after resize/filter
-  window.addEventListener('resize', ()=>{buildDots();goToSlide(currentIndex);});
-
-  function applyFilter(filter){
-    const items = getItems();
-    items.forEach(item => {
-      const categories = item.getAttribute('data-category') || '';
-      const match = filter === 'all' || categories.includes(filter);
-      item.style.display = match ? 'block' : 'none';
+  if(toggleBtn){
+    toggleBtn.addEventListener('click', ()=>{
+      expanded = !expanded;
+      render(currentFilter);
+      if(!expanded){
+        grid.scrollIntoView({behavior:'smooth', block:'start'});
+      }
     });
-    // After filtering, snap scroll back to start
-  track.scrollTo({left:0,behavior:'smooth'});
-  currentIndex=0;
-  buildDots();
-  updateDots();
   }
 
   tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=> t.classList.remove('active'));
       tab.classList.add('active');
-      applyFilter(tab.getAttribute('data-tab'));
+      currentFilter = tab.getAttribute('data-tab');
+      expanded = false; // reset to collapsed when changing filter
+      render(currentFilter);
     });
   });
 
-  // Carousel controls
-  const prevBtn = document.querySelector('.proj-prev');
-  const nextBtn = document.querySelector('.proj-next');
-  function scrollByDir(dir){
-    const base = track.clientWidth; // visible width
-    track.scrollBy({left: dir * (base * 0.8), behavior:'smooth'});
-  }
-  if(prevBtn) prevBtn.addEventListener('click', ()=> scrollByDir(-1));
-  if(nextBtn) nextBtn.addEventListener('click', ()=> scrollByDir(1));
-
-  // Drag to scroll (desktop)
-  let isDown=false,startX,scrollLeft;
-  track.addEventListener('mousedown',e=>{isDown=true;track.classList.add('dragging');startX=e.pageX;scrollLeft=track.scrollLeft;});
-  window.addEventListener('mouseup',()=>{isDown=false;track.classList.remove('dragging');});
-  window.addEventListener('mousemove',e=>{if(!isDown) return; const dx=e.pageX-startX; track.scrollLeft=scrollLeft-dx;});
-  // Touch support
-  let touchStartX=0,touchScrollLeft=0;
-  track.addEventListener('touchstart',e=>{touchStartX=e.touches[0].pageX;touchScrollLeft=track.scrollLeft;});
-  track.addEventListener('touchmove',e=>{const dx=e.touches[0].pageX-touchStartX;track.scrollLeft=touchScrollLeft-dx;},{passive:true});
-
-  // Detect manual interaction to pause autoplay temporarily
-  ['mousedown','touchstart','wheel','keydown'].forEach(evt=>{
-    track.addEventListener(evt,()=>{stopAutoplay();startAutoplay();},{passive:true});
-  });
-
-  // Initialize
-  buildDots();
-  goToSlide(0);
-  startAutoplay();
+  // Initial render
+  render(currentFilter);
 })();
 
 // Smooth scroll for navigation links
