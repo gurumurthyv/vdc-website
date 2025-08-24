@@ -30,19 +30,53 @@ if (navToggle) {
 }
 
 // Contact form (static demo)
-function handleSubmit(){
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
+function handleSubmit(e){
+  if(e) e.preventDefault();
+  const nameEl = document.getElementById('name');
+  const emailEl = document.getElementById('email');
+  const subjectEl = document.getElementById('subject');
+  const messageEl = document.getElementById('message');
+  const honeypot = document.getElementById('website');
   const msg = document.getElementById('formMsg');
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  const subject = subjectEl.value.trim();
+  const message = messageEl.value.trim();
+
+  // Basic validation
+  if(honeypot && honeypot.value){
+    // Bot likely; silently ignore
+    msg.textContent = 'Submission ignored.';
+    return false;
+  }
   if(!name || !email || !subject || !message){
     msg.textContent = 'Please fill out all fields.';
-    return;
+    return false;
   }
-  // Demo-only: imitate success
-  msg.textContent = 'Thanks! Your message has been recorded locally (demo only).';
-  console.log({name,email,subject,message});
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRegex.test(email)){
+    msg.textContent = 'Enter a valid email.';
+    emailEl.focus();
+    return false;
+  }
+
+  // Store locally (simple front-end only persistence)
+  try {
+    const stored = JSON.parse(localStorage.getItem('contactSubmissions')||'[]');
+    stored.push({name,email,subject,message,date:new Date().toISOString()});
+    localStorage.setItem('contactSubmissions', JSON.stringify(stored));
+  } catch(err){
+    console.warn('Local storage unavailable', err);
+  }
+
+  // Provide a mailto link fallback (opens user email client)
+  const mailto = `mailto:info@verticaldistrict.com?subject=${encodeURIComponent('[Website] '+subject)}&body=${encodeURIComponent('Name: '+name+'%0AEmail: '+email+'%0A%0A'+message)}`;
+  msg.innerHTML = 'Message stored locally. <a href="'+mailto+'">Click to send via email client</a>.';
+  msg.style.color = 'var(--accent)';
+
+  // Reset form (optional)
+  nameEl.value='';emailEl.value='';subjectEl.value='';messageEl.value='';
+  return false;
 }
 window.handleSubmit = handleSubmit;
 
